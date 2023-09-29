@@ -44,5 +44,10 @@ overwrite_option="@resurrect-never-overwrite"
 # Hooks are set via ${hook_prefix}${name}, i.e. "@resurrect-hook-post-save-all"
 hook_prefix="@resurrect-hook-"
 
+# The content id, which is passed as an environment variable whenever we
+# restore a pane.  This enables resurrection of shell state.
+resurrect_session_option="@resurrect-content-id"
+content_id_env_var="TMUX_RESURRECT_CONTENT_ID"
+
 delete_backup_after_option="@resurrect-delete-backup-after"
 default_delete_backup_after="30" # days
