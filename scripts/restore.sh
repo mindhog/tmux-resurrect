@@ -173,8 +173,6 @@ new_pane() {
 	else
 		tmux split-window -t "${session_name}:${window_number}" -c "$dir" -e "${content_id_env_var}=${content_id}"
 	fi
-	# minimize window so more panes can fit
-	tmux resize-pane -t "${session_name}:${window_number}" -U "999"
 	tmux set-option -p -t "$pane_id" "$resurrect_session_option" "$content_id"
 }
 
